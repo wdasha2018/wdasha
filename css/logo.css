@@ -1,0 +1,51 @@
+/** %%%%%%%%%% ЛОГО %%%%%%%%%% **/
+.container {
+    width: 100%;
+    height: auto;
+    background-color: rgba(205, 235, 237, 1.0);
+}
+
+.container-logo {
+    display: grid;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    padding: 0;
+}
+
+.container-logo-img {
+    grid-area: 1 / 1 / 2 / 11;
+    width: 100%;
+    height: auto;
+}
+
+.container-txt {
+    grid-area: 1 / 6 / 2 / 11;
+    background-color: rgba(255, 255, 255, .8);
+    align-self: stretch;
+}
+
+.container-txt p {
+    display: none;
+    text-align: center;
+    font-size: 2.5em;
+    color: rgba(22, 160, 133, 1.0);
+    padding: 0;
+}
+
+.container-logo-txt {
+    grid-area: 1 / 6 / 2 / 11;
+    font-size: 1em;
+    padding: 0 72px 0 72px;
+    align-self: center;
+}
+
+.container-logo-txt p {
+    margin: 8px 0 8px 0;
+}
+
+.item-logo-txt {
+    background-color: rgba(255, 255, 255, .6);
+    padding: 200px 50px 200px 50px;
+}

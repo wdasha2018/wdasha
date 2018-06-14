@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Проект - Центр занятости населения</title>
+    <!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="css/projects.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/tamplates.css" rel="stylesheet"> -->
+</head>
+<body>
+
+<a class="anchor-item" id="main5"></a>
+
+<header>
+    <h1>Web-разработчик</h1>
+</header>
+
+<div class="nav-container">
+    <div class="menu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" height="48" id="svg8" version="1.1" viewBox="0 0 12.7 12.7" width="48"><g id="layer1" transform="translate(0,-284.29998)"><path d="m 2.8222223,287.1222 v 1.41111 h 7.0555558 v -1.41111 z m 0,2.82222 v 1.41112 h 7.0555558 v -1.41112 z m 0,2.82223 v 1.41111 h 7.0555558 v -1.41111 z" id="rect4487" style="opacity:1;vector-effect:none;fill-opacity:1;stroke:none;stroke-width:0.07055555;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/></g></svg>
+    </div>
+    <nav id="menu">
+        <a href="index.html#main5" class="item-nav">Главная</a>
+        <a href="index.html#scills5" class="item-nav">Навыки</a>
+        <a href="index.html#whatido5" class="item-nav">Что делаю</a>
+        <a href="index.html#templates5" class="item-nav">Шаблоны</a>
+        <a href="index.html#projects5" class="item-nav">Проекты</a>
+        <a href="index.html#contacts5" class="item-nav">Контакты</a>
+    </nav>
+</div>
+
+<!-- <div class="container">
+<div class="container-logo">
+    <img src="img/full.jpg" class="container-logo-img" />
+    <div class="container-txt">
+        <p>Web<br>разработчик</p>
+    </div>
+    <div class="container-logo-txt">
+        <p>Проект Центр занятости населения - это сайт с фиксированным по размеру дизайном для информационного терминала центра занятости. В задачи сайта входит информирование посетителей центра об услугах государственной службы, действующим законодательством в данной сфере, графиком и услуовиями работы учреждения, информационная поддержка граждан зарегистрированных в качестве безработных и т.д.</p>
+    </div>
+</div>
+</div> -->
+
+<article class="project-szn" id="project-szn">
+    <div class="item1-project-szn">
+        <h1>Проект - Центр занятости населения</h1>
+    </div>
+    <div class="item2-project-szn">
+        <p>Проект Центр занятости населения - это сайт с фиксированным по размеру дизайном для информационного терминала центра занятости. В задачи сайта входит информирование посетителей центра об услугах государственной службы, действующим законодательством в данной сфере, графиком и услуовиями работы учреждения, информационная поддержка граждан зарегистрированных в качестве безработных и т.д.</p>
+        <p>Сайт Центр занятости населения может быть исользован для наполнения любым содержимым (как текстом, так и иллюстрациями) на различную тематику. Блоковая система сожержимого позволяет добовлять, перемещать или удалять любые части web-страниц.</p>
+        <a href="http://f0176838.xsph.ru" class="demo">Демо сайта</a>
+    </div>
+    <div class="item3-project-szn">
+        <img src="img/terminal-theme-00.jpg" alt=""><br>
+    </div>
+    <div class="item4-project-szn">
+        <img src="img/szn01.jpg" alt="">
+    </div>
+    <div class="item5-project-szn">
+        <img src="img/szn02.jpg" alt="">
+    </div>
+</article>
+
+<div class="footer-container">
+<div class="footer">
+    <div class="footer-item">
+        <p>Шаблоны HTML, темы Wordpress<br>Copyright © wd-asha 2018</p>
+    </div>
+    <div class="footer-item">
+        <p>Условия и Положения<br>wd-asha@bk.ru</p>
+    </div>
+</div>
+</div>
+
+<div id="toTop">Наверх</div>
+
+<div class="min-320">
+    <p>Извените,<br>сайт не оптимизирован<br>под такой экран<br>Минимальная ширина<br>экрана 320 px</p>
+</div>
+
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.1.7.1.min.js"></script>
+
+<!-- Скрол наверх -->
+<script type="text/javascript">
+    $(function() {
+        $(window).scroll(function() {
+            if($(this).scrollTop() > 500) {
+                $('#toTop').fadeIn();
+            } else {
+                $('#toTop').fadeOut();
+            }
+        });
+        $('#toTop').click(function() {
+            $('body,html').animate({scrollTop:0},800);
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.menu-icon').click(function () {
+            $('nav').toggle();
+        });
+    });    
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.item-nav').click(function () {
+            if ($('.menu-icon').is(':visible')){
+                $('nav').toggle();
+            };
+        });
+    });    
+</script>
+
+</body>
+</html>

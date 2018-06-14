@@ -1,0 +1,172 @@
+.lb-album li {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.lb-album li > a,
+.lb-album li > a img {
+    display: block;
+}
+
+.lb-album li > a {
+    position: relative;
+    padding: 7px;
+    /* background: #2195f3; */
+    
+    border: 1px solid #2195f3;
+    text-align: center;
+}
+
+.lb-album li > a span {
+    position: absolute;
+    width: 260px;
+    height: 233px;
+    top: 7px;
+    left: 7px;
+    text-align: center;
+    line-height: 200px;
+    color: rgba(33,149,243,0.8);
+    font-size: 1.3em;
+    opacity: 0;
+    filter: alpha(opacity=0); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+    background: rgb(241,210,194);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%, rgba(241,210,194,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.56)), color-stop(100%,rgba(241,210,194,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.8) 0%,rgba(194,210,241,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+    background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    -ms-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+}
+
+.lb-album li > a:hover span{
+	opacity: 1;
+	filter: alpha(opacity=99); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
+}
+.lb-overlay{
+	width: 0px;
+	height: 0px;
+	position: fixed;
+	overflow: hidden;
+	left: 0px;
+	top: 0px;
+	padding: 0px;
+	z-index: 99;
+	text-align: center;
+	background: rgb(194,210,241,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%, rgba(241,210,194,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.9)), color-stop(100%,rgba(241,210,194,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.9) 0%,rgba(194,210,241,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+	background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+}
+.lb-overlay > div {
+	position: relative;
+	color: rgba(27,54,81,0.8);
+	opacity: 0;
+	filter: alpha(opacity=0); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+	width: 550px;
+	margin: 10px auto 0px auto;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
+	-webkit-transition: opacity 0.3s linear 1.3s;
+	-moz-transition: opacity 0.3s linear 1.3s;
+	-o-transition: opacity 0.3s linear 1.3s;
+	-ms-transition: opacity 0.3s linear 1.3s;
+	transition: opacity 0.3s linear 1.3s;
+}
+
+.lb-overlay a.lb-close{
+	font-size: 3em;
+    background: rgba(22, 160, 133, 1.0);
+	z-index: 1001;
+	color: #fff;
+	position: absolute;
+	top: 5%;
+	line-height: 3em;
+    right:5%;
+	padding: 0 5px 2px 5px;
+	line-height: 34px;
+	text-align: center;
+	overflow: hidden;
+	
+	opacity: 0;
+	filter: alpha(opacity=0); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+
+	-webkit-transition: opacity 0.3s linear 1.2s;
+	-moz-transition: opacity 0.3s linear 1.2s;
+	-o-transition: opacity 0.3s linear 1.2s;
+	-ms-transition: opacity 0.3s linear 1.2s;
+	transition: opacity 0.3s linear 1.2s;
+    text-decoration: none;
+}
+
+a.lb-close:hover {
+    text-decoration: none;
+    background: rgba(27, 188, 155, 1.0);
+}
+
+.lb-overlay img {
+	position: relative;
+    border: 1px solid rgba(4, 147, 114, .7); 
+}
+
+.lb-overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0px;
+	right: 0px;
+	padding: 10% 20% 25% 20%;
+}
+
+.lb-overlay:target img {
+	-webkit-animation: fadeInScale 1.2s ease-in-out;
+	-moz-animation: fadeInScale 1.2s ease-in-out;
+	-o-animation: fadeInScale 1.2s ease-in-out;
+	-ms-animation: fadeInScale 1.2s ease-in-out;
+	animation: fadeInScale 1.2s ease-in-out;
+    margin: 0 auto;
+}
+
+.lb-overlay:target a.lb-close,
+.lb-overlay:target > div{
+	opacity: 1;
+	filter: alpha(opacity=99); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
+}
+@-webkit-keyframes fadeInScale {
+  0% { -webkit-transform: scale(0.6); opacity: 0; }
+  100% { -webkit-transform: scale(1); opacity: 1; }
+}
+@-moz-keyframes fadeInScale {
+  0% { -moz-transform: scale(0.6); opacity: 0; }
+  100% { -moz-transform: scale(1); opacity: 1; }
+}
+@-o-keyframes fadeInScale {
+  0% { -o-transform: scale(0.6); opacity: 0; }
+  100% { -o-transform: scale(1); opacity: 1; }
+}
+@-ms-keyframes fadeInScale {
+  0% { -ms-transform: scale(0.6); opacity: 0; }
+  100% { -ms-transform: scale(1); opacity: 1; }
+}
+@keyframes fadeInScale {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* 
+	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
+	http://bricss.net/post/11230266445/css-hack-to-target-opera 
+*/
+x:-o-prefocus, .lb-overlay img {
+    height: 100%;
+}
